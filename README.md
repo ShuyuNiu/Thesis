@@ -1,97 +1,71 @@
-# 武汉大学毕业论文 LaTeX 模板
+# 小牛同学的毕业论文
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Last Commit](https://img.shields.io/github/last-commit/mtobeiyf/whu-thesis.svg)](https://github.com/mtobeiyf/whu-thesis/commits/)
-[![Overleaf](https://img.shields.io/badge/overleaf-whuthesis-green.svg)](https://www.overleaf.com/latex/templates/wuhan-university-latex-undergraduate-thesis-template/kpystysgbgmr)
-[![](https://github.com/mtobeiyf/whu-thesis/workflows/LaTeX%20Compile/badge.svg)](https://github.com/mtobeiyf/whu-thesis/actions)
+基于 [WHU-Thesis](https://github.com/whutug/whu-thesis) 修改，感谢 `WHU-Thesis` 团队！
 
-本项目为武汉大学毕业论文 LaTeX 模板，支持本科生、硕士与博士的论文编写。
+<br>
 
-\***由于模板更新频繁，请确保使用 whu-thesis 的最新版本，并在使用之前将所有宏包更新至最新。**
+## 关于本人
 
-\**硕博现有的著者—出版年的 bst 使用的是 gbt7714-author-year.bst，遵循 GB/T 7714-2015 标准，可能不完全符合研究生院的要求。*
+`LaTex` 初学者，只会对葫芦画瓢.
 
-根据[《武汉大学本科生毕业论文（设计）书写印制规范》](https://github.com/mtobeiyf/whu-thesis/files/4638713/default.pdf)编写，力求合规，简洁，易于实现，用户友好。
+<br>
 
-## 样例展示
+## 使用说明
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/5097752/55679059-f250d300-5936-11e9-8dfe-937a64a0c6bf.png" width="800px">
-</p>
+> *老周，开发环境已经配好了，这部分可以跳过啦.*
 
-正文样例可以参照 [whuthesis-demo](whuthesis-demo.pdf)
+请配合 [`Visual Studio Code`](https://code.visualstudio.com/)  + `LaTex Workshop` + [`Tex Live 2020`](https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/texlive2020.iso) 使用.
 
-开题报告样例可以参照 [opening-demo](opening-demo.pdf)
+如出现生成失败等问题，请确保 `Tex Live` 的相关宏包已经更新至最新.
 
-## 如何使用
+```powershell
+# 使用以下命令更新宏包
+tlmgr update --self --all
+```
 
-使用前请阅读[使用文档](whuthesis-doc.pdf)
+<br>
 
-推荐两种方式进行编辑和编译：
+## 目录与文件说明
 
-* [本地编译](#本地编译)
-* [Overleaf 在线编译](#overleaf-在线编译)
+- `.vscode` 包含本项目所需的 `LaTex Workshop` 的配置文件，其中关闭了**自动生成**，指定所有的输出文件输出至 `build` 文件夹下，指定PDF使用内置浏览器浏览.
 
-### 本地编译
+- `build` 包含 `main.pdf` 以及生成之所需的辅助文件.
 
-本地编译需要安装 TeX 发行版软件, 具体可参见 [本地安装使用指南](https://github.com/mtobeiyf/whu-thesis/wiki/%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85%E4%B8%8E%E7%BC%96%E8%AF%91)
+- `data` 包含必要的 GBT 规范文件，以及武汉大学的校名PDF.
 
-### Overleaf 在线编译
+- `demo` 包含 `WHU-Thesis` 项目提供的示例文件及其PDF，如有需要请复制到根目录生成.
 
-[![Overleaf](https://img.shields.io/badge/overleaf-whuthesis-green.svg)](https://www.overleaf.com/latex/templates/wuhan-university-latex-undergraduate-thesis-template/kpystysgbgmr)
+- `doc` 包含 `WHU-Thesis` 项目的使用指南.
 
-[Overleaf](https://www.overleaf.com/) 是一个简洁的在线 LaTeX 编辑器。无需安装，实时共享，版本控制。该模板支持了 Overleaf 的在线编辑，可以从上面的模板链接直接创建自己的项目。
+- `figures` 包含论文中使用的插图文件.
 
-使用该模板时，需要设置 `XeLaTeX` 或 `LuaLaTeX` 为编译器，具体步骤请查看 [Overleaf 在线编辑](https://github.com/mtobeiyf/whu-thesis/wiki/Overleaf-%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%BE%91)
+- `pages` 包含论文各部分的 `tex` 文件，会在 `main.tex` 中被引用.
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/5097752/55882483-319d4f00-5bd7-11e9-86ff-687106144e16.png" width="800px">
-</p>
+- `ref` 包含 `bibtex` 格式的引用.
 
-## 详细说明
+- `main.tex` 为主文件，请使用该文件生成PDF.
 
-关于模板使用、参考文献引用等常见问题请移步 [Wiki](https://github.com/mtobeiyf/whu-thesis/wiki)
+- `whu-thesis.cls` 提供必需的样式和格式规定.
 
-## 问题反馈
+<br>
 
-如果在使用中发现问题，请按照以下步骤操作：
+## 相关链接
 
-1. 阅读学校的[书写印制规范文件](https://github.com/mtobeiyf/whu-thesis/files/4638713/default.pdf)，判断是否符合要求；
-2. 前往项目 [Wiki](https://github.com/mtobeiyf/whu-thesis/wiki) 查看相关说明；
-3. 将 TeX 发行版和宏包升级到最新，并且将模板升级到 Github 上最新版本，查看问题是否已经修复；
-4. 在 [GitHub Issues](https://github.com/mtobeiyf/whu-thesis/issues) 中搜索该问题的关键词；
-5. 提出新的 [Issue](https://github.com/mtobeiyf/whu-thesis/issues)，并说明系统、TeX 版本、出现的问题等关键信息。
+- [武汉大学毕业论文（设计）智能管理系统](http://210.42.121.231/bysj/)
 
-## 更多链接
+- [关于认真做好2020届本科生 毕业论文（设计）答辩工作的通知](https://info.whu.edu.cn/info/2268/5690.htm)
 
-* [关于认真做好2020届本科生 毕业论文（设计）答辩工作的通知](https://info.whu.edu.cn/info/1318/185710.htm)
-* [武汉大学本科生毕业论文（设计）工作管理办法](http://ugs.whu.edu.cn/info/1049/1935.htm)
-* [武汉大学毕业论文（设计）智能管理系统](http://210.42.121.231/bysj/)
+- [关于开展2021届本科生毕业论文(设计) 选题工作的通知](https://info.whu.edu.cn/info/2268/5606.htm)
 
-## 后续计划
+<br>
 
-* 支持打印模式、课程报告模式。
-
-* 增加符合 gbt7714-2005 的著者—出版年的 bst 格式。如果可以，使用 gbt7714 重写现有的顺序编码制的 bst。
-
-* 增加 BibLaTeX 支持。
-
-欢迎提交 Pull Request。
-
-## 致谢
-
-[黄正华老师的模板](http://aff.whu.edu.cn/huangzh/)
 <details>
-<summary>其它高校的相关开源项目</summary>
+<summary></summary>
+<br>
+我是懒狗.
 
-* [bsThesisWHU](https://github.com/csarron/bsThesisWHU)
-* [HUSTPaperTemp](https://github.com/skinaze/HUSTPaperTemp)
-* [SJTUThesis](https://github.com/sjtug/SJTUThesis)
-* [ustcthesis](https://github.com/ustctug/ustcthesis)
-* [TJU-thesis-template](https://github.com/liangzhenduo0608/TJU-thesis-template)
-* [xdba-thesis](https://github.com/xdlinux/xdba-thesis)
-* [NEUBachelorThesis](https://github.com/tzaiyang/NEUBachelorThesis)
-* [ThuThesis](https://github.com/tuna/thuthesis)
-* [fduthesis](https://github.com/stone-zeng/fduthesis)
+不想写毕设.
+
+就比如我花了半个小时写这个 `readme` 也不想看论文.
 
 </details>

@@ -2,6 +2,10 @@
   "[latex]": {
     "editor.wordWrap": "on"
   },
+  "latex-workshop.latex.autoBuild.run": "never",
+  "latex-workshop.latex.outDir": "%DIR%/build",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.intellisense.citation.label": "title",
   "latex-workshop.latex.tools": [
     {
       "name": "XeLaTeXmk",
@@ -12,6 +16,7 @@
         "-shell-escape",
         "-interaction=nonstopmode",
         "-file-line-error",
+        "--output-directory=%OUTDIR%",
         "%DOCFILE%.tex"
       ]
     },
@@ -24,6 +29,7 @@
         "-shell-escape",
         "-interaction=nonstopmode",
         "-file-line-error",
+        "--output-directory=%OUTDIR%",
         "%DOCFILE%.tex"
       ]
     },
@@ -34,6 +40,7 @@
         "-synctex=1",
         "-interaction=nonstopmode",
         "-file-line-error",
+        "--output-directory=%OUTDIR%",
         "-shell-escape",
         "%DOC%"
       ]
@@ -45,6 +52,7 @@
         "-synctex=1",
         "-interaction=nonstopmode",
         "-file-line-error",
+        "--output-directory=%OUTDIR%",
         "-shell-escape",
         "%DOC%"
       ]
@@ -53,8 +61,11 @@
       "name": "bibtex",
       "command": "bibtex",
       "args": [
-        "%DOCFILE%"
-      ]
+        "%OUTDIR%/%DOCFILE%"
+      ],
+      "env": {
+        "TEXMFOUTPUT": "%OUTDIR%"
+      }
     }
   ],
   "latex-workshop.latex.recipes": [
@@ -88,7 +99,5 @@
         "lualatex"
       ]
     }
-  ],
-  "latex-workshop.view.pdf.viewer": "tab",
-  "latex-workshop.intellisense.citation.label": "title"
+  ]
 }
