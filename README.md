@@ -49,6 +49,25 @@ tlmgr update --self --all
 
 <br>
 
+## 工具
+
+主要工具：Tex Live 2020 + Visual Studio Code
+
+版本控制：Gitea + Git
+
+参考文献管理：[Mendeley](https://www.mendeley.com/?interaction_required=true)
+
+公式编辑：[AxMath](https://www.amyxun.com/) + [Mathpix Snip](https://mathpix.com/)
+
+插图绘制：Microsoft PowerPoint + Microsoft Visio
+
+图表绘制：Microsoft Excel + MATLAB
+
+英文阅读：[Copy Translator](https://copytranslator.github.io/)
+
+
+<br>
+
 ## 相关链接
 
 - [武汉大学毕业论文（设计）智能管理系统](http://210.42.121.231/bysj/)
